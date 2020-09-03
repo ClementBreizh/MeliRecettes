@@ -1,0 +1,41 @@
+<div class="welcome">
+
+  <a routerLink="">
+    <button class="myRecipesButton" mat-raised-button *ngIf="isAuth">
+      <span>Mes<br>recettes<br>favorites</span>
+    </button>
+  </a>
+
+  <a routerLink="/create">
+    <button class="addRecipesButton" mat-raised-button *ngIf="isAuth">
+      <span>Ajouter<br>une recette</span>
+    </button>
+  </a>
+
+  <a routerLink="/list">
+    <button class="listRecipesButton" mat-raised-button *ngIf="isAuth">
+      <span>Liste<br>des recettes</span>
+    </button>
+  </a>
+
+  <mat-card class="welcome" *ngIf="!isAuth">
+    <span>
+      Merci de vous identifier ou de vous inscrire pour avoir accès à l'application
+    </span>
+  </mat-card>
+
+  <div class="menu">
+    <li *ngIf="!isAuth">
+      <a routerLink="/login"><button mat-raised-button class="loginButton">
+          <mat-icon>done</mat-icon><br> Connexion
+        </button></a>
+    </li>
+    <li *ngIf="!isAuth">
+      <a routerLink="/signup"><button mat-raised-button class="signButton">
+          <mat-icon>create</mat-icon><br> Inscription
+        </button></a>
+    </li>
+  </div>
+
+
+</div>

@@ -1,0 +1,71 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+button {
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  border: 5px solid cornsilk;
+  border-radius: 5%;
+
+  font-size: 18px;
+}
+
+
+.myRecipesButton {
+  background-image: url('../myRecipes.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.addRecipesButton {
+  background-image: url('../addRecipe.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.listRecipesButton {
+  background-image: url('../listRecipes.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.welcome, .loginbutton, .signButton {
+  margin-top: 5%;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+li button {
+  margin: 5px;
+  width: 250px;
+}
+
+.loginButton {
+  background: linear-gradient(-45deg, #84db3c, #24a077, #095672);
+}
+
+.signButton {
+  background: linear-gradient(-45deg, #ee7752, #e71c7e, #23a6d5);
+}
+
+.menu {
+  display: flex;
+}

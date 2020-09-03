@@ -1,0 +1,47 @@
+.toolbar {
+  background-color: rgba(95, 158, 160, 0.5);
+
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+li {
+  list-style: none;
+  margin: auto;
+  margin-left: 15px;
+}
+
+li button {
+  margin: 2px;
+  width: 150px;
+}
+
+
+.homeButton,
+.createButton,
+.listButton {
+  background: linear-gradient(-45deg, #84db3c, #24a077, #095672);
+}
+
+.logoutButton {
+  background: linear-gradient(-45deg, #ee7752, #e71c7e, #23a6d5);
+}
+
+.menu {
+  display: flex;
+}

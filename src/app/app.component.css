@@ -1,0 +1,12 @@
+main {
+  margin: auto;
+  width: 80%;
+}
+
+section {
+  height: 100%;
+  margin: 0px;
+  background-image:url("../app/avocat.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

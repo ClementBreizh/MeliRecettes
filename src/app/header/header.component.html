@@ -1,0 +1,32 @@
+<link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+<mat-toolbar class="toolbar" style="font-family:Aguafina Script ;">
+
+  <div class="logo">
+
+    <h1 style="font-family:Aguafina Script ;">Méli-recettes</h1>
+    <p>Recueil de bons petits plats</p>
+  </div>
+  <li *ngIf="userIsAuth">
+    <a routerLink="/"><button mat-raised-button class="homeButton">
+        <mat-icon>home</mat-icon><br> Acceuil
+      </button></a>
+  </li>
+  <li *ngIf="(userIsAuth) && (getRouter().url != '/create') && (getRouter().url != '/')">
+    <a routerLink="/create"><button mat-raised-button class="createButton">
+        <mat-icon>create</mat-icon><br> Créer une recette
+      </button></a>
+  </li>
+  <li *ngIf="(userIsAuth) && (getRouter().url != '/list') && (getRouter().url != '/')">
+    <a routerLink="/list"><button mat-raised-button class="listButton">
+        <mat-icon>library_books</mat-icon><br> Liste des recettes
+      </button></a>
+  </li>
+  <div class="spacer"></div>
+  <div class="menu">
+    <li *ngIf="userIsAuth">
+      <button mat-raised-button class="logoutButton" (click)="onLogout()">
+        <mat-icon>clear</mat-icon><br> Déconnexion
+      </button>
+    </li>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form [formGroup]="form" (submit)="saveRecipes()" *ngIf="!isLoading">
+    <mat-form-field>
+      <mat-label>Titre de votre recette</mat-label>
+      <input matInput type="text" [formControlName]="'title'">
+      <mat-error *ngIf="form.get('title').invalid">{{ formErrorMessage() }}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Instructions de préparation</mat-label>
+      <textarea matInput rows="20" [formControlName]="'content'">
+    </textarea>
+      <mat-error *ngIf="form.get('content').invalid">{{ formErrorMessage() }}</mat-error>
+    </mat-form-field>
+    <div>
+      <div classe="previewImage"
+      *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+        <img [src]="imagePreview" [alt]="form.value.title">
+      </div>
+      <button mat-stroked-button type="button" (click)="filePicker.click()">
+        <mat-icon>add_circle_outline</mat-icon>
+        Ajouter une photo
+      </button>
+      <input type="file" #filePicker (change)="onImagePicked($event)">
+    </div>
+    <button mat-raised-button type="submit">Enregistrer la recette</button>
+  </form>
+</mat-card>

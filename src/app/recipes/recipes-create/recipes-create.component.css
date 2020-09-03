@@ -1,0 +1,39 @@
+mat-form-field,textarea {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+mat-card {
+  background-color: rgba(95,158,160, 0.85);
+  margin: auto;
+  margin-top: 1rem;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+button {
+  margin-top: 1rem;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+input[type="file"] {
+  visibility: hidden;
+}
+
+.previewImage {
+  height: 5rem;
+  margin: 1rem 0;
+}
+
