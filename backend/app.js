@@ -10,8 +10,7 @@ const app = express();
 
 mongoose
   .connect(
-    "mongodb+srv://clement:XKNl9XNfsXuKJrI4@cluster0.kmvxw.mongodb.net/melirecettes?retryWrites=true&w=majority",
-    { useUnifiedTopology: true, useNewUrlParser: true }
+  
   )
   .then(() => {
     console.log("Connect to database");
